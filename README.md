@@ -1,4 +1,4 @@
-* Visualforce Remoting for use in any Javascript Project
+*Visualforce Remoting for use in any Javascript Project
 
 ** Install
 npm install clay-vfremoting
