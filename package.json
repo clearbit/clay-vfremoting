@@ -1,5 +1,5 @@
 {
-  "name": "clay-vfremoting",
+  "name": "clay-vfr",
   "version": "0.0.1",
   "description": "Javascript Library for Salesforce, Visualforce using the Clay for Salesforce Package available in AppExchange",
   "main": "index.js",
