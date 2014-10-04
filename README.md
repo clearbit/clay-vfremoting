@@ -1,4 +1,5 @@
 #Visualforce Remoting for use in any Javascript Project
+Inspiration and Code from [https://github.com/noeticpenguin/ngForce](ng-force)
 
 ## Install
 npm install clay-vfremoting
