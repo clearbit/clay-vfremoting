@@ -1,14 +1,14 @@
-*Visualforce Remoting for use in any Javascript Project
+#Visualforce Remoting for use in any Javascript Project
 
-** Install
+## Install
 npm install clay-vfremoting
 
-** Dependencies
+### Dependencies
 Uses KEW, which is a lightweight implementation of Q, Javascript Promises.
 
 Written NODEJS Style. Designed to be used by Clay, but it's real dependency is a Common JS Compiler for the browser like Browserify
 
-** Use
+### Use
 var Vfr = require("clay-vfremoting");
 
 Vfr.send( METHOD, OPTIONS, NULLOK )
@@ -21,7 +21,7 @@ NULLOK: Tells the system if it's ok for the response to be NULL, if not it will 
 
 RETURNS: Vfr.send will return a function that can be called with params. This function returns a promise.
 
-## Example
+### Example
 var send = Vfr.send( "Math_Controller.addNumbers");
 
 send(1,5)
