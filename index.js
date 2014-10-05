@@ -1,11 +1,6 @@
 var Q = require("kew");
 
-VisualforceRemoting = {
-  standardOptions: {
-    escape: false,
-    timeout: 10000
-  }
-}
+
   /*
    * Kevin o'Hara released premote, a nice lib for wrapping
    * visualforce remoting calls in a promise interface. this
@@ -26,12 +21,12 @@ VisualforceRemoting = {
    * @param  {Object}   visualforce  Used for Testing
    * @return {Function}              Function engaged with the NG execution loop, making Visualforce remoting calls.
    */
-VisualforceRemoting.send = function(remoteAction, options, nullok) {
+VisualforceRemoting = function(remoteAction, options, nullok) {
   //Injection for Testing
   if(VisualforceRemoting.Visualforce) Visualforce = VisualforceRemoting.Visualforce;
   
   if (typeof Visualforce != 'object') {
-    throw new Error('Visualforce is not available as an object!');
+    throw new Error('Visualforce is not available globally!');
   }
 
   if(!options) options = VisualforceRemoting.standardOptions;
@@ -84,5 +79,9 @@ VisualforceRemoting.handleResultWithPromise = function(result, event, nullok, de
   }
 }
 
+VisualforceRemoting.standardOptions= {
+    escape: false,
+    timeout: 10000
+}
 
 module.exports = VisualforceRemoting;

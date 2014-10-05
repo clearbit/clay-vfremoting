@@ -13,7 +13,7 @@ test("should respond ok with no params", function(t){
     return callback("{}");
   }
 
-  var send = VisualforceRemoting.send("controller.method");
+  var send = VisualforceRemoting("controller.method");
   send()
   .then( function(result){ t.deepEqual(result, {} );  } )
   .fail( function(err) { t.equal( null, err ) } )
@@ -30,7 +30,7 @@ test("should respond ok with params", function(t){
     return callback("{}");
   }
 
-  var send = VisualforceRemoting.send("controller.method");
+  var send = VisualforceRemoting("controller.method");
   send("test", 5)
   .then( function(result){ t.deepEqual(result, {} );  } )
   .fail( function(err) { t.equal( null, err ) } )
@@ -46,7 +46,7 @@ test("should respond ok with params and options", function(t){
     return callback("{}");
   }
 
-  var send = VisualforceRemoting.send("controller.method", { escape: false });
+  var send = VisualforceRemoting("controller.method", { escape: false });
   send("test", 5)
   .then( function(result){ t.deepEqual(result, {} );  } )
   .fail( function(err) { t.equal( null, err ) } )
@@ -61,7 +61,7 @@ test("should respond null, ok to be null", function(t){
     return callback();
   }
 
-  var send = VisualforceRemoting.send("controller.method",{}, true);
+  var send = VisualforceRemoting("controller.method",{}, true);
   send("test", 5)
   .then( function(result){ t.equal(result, undefined );  } )
   .fail( function(err) { t.equal( null, err ) } )
@@ -74,7 +74,7 @@ test("should respond null, not ok to be null", function(t){
     return callback();
   }
 
-  var send = VisualforceRemoting.send("controller.method");
+  var send = VisualforceRemoting("controller.method");
   send("test", 5)
   .fail( function(err) { t.notEqual( null, err ) } )
 });
@@ -86,7 +86,7 @@ test("should respond error", function(t){
     return callback([{errorCode: "ANY_ERROR", message: "Just and error"}]);
   }
 
-  var send = VisualforceRemoting.send("controller.method");
+  var send = VisualforceRemoting("controller.method");
   send("test", 5)
   .fail( function(err) { t.equal( "ANY_ERROR" , err[0].errorCode ) } )
 
