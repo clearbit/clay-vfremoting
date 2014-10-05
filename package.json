@@ -1,14 +1,13 @@
 {
   "name": "clay-vfr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Javascript Library for Salesforce, Visualforce using the Clay for Salesforce Package available in AppExchange",
   "main": "index.js",
-
   "scripts": {
     "test": "tape ./test/remoting.js"
   },
   "author": "@rodriguezartav",
-  "repository":"https://github.com/3vot/clay-vfremoting",
+  "repository": "https://github.com/3vot/clay-vfremoting",
   "license": "BSD-2-Clause",
   "dependencies": {
     "kew": "~0.5.0-alpha.1"
