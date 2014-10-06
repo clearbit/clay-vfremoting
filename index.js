@@ -29,7 +29,7 @@ VisualforceRemoting = function(remoteAction, options, nullok) {
     throw new Error('Visualforce is not available globally!');
   }
 
-  if(!options) options = VisualforceRemoting.standardOptions;
+  if(!options || options === {} ) options = VisualforceRemoting.standardOptions;
 
   var namespace, controller, method;
   var Manager = Visualforce.remoting.Manager;
