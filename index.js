@@ -64,7 +64,7 @@ VisualforceRemoting.handleResultWithPromise = function(result, event, nullok, de
     if (typeof result !== 'object') {
       result = JSON.parse(result);
     }
-    if (Array.isArray(result) && result[0].message && result[0].errorCode) {
+    if (Array.isArray(result) && result.length > 0 && result[0].message && result[0].errorCode) {
       deferred.reject(result);
     } else {
       deferred.resolve(result);
