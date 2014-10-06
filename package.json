@@ -1,6 +1,6 @@
 {
   "name": "clay-vfr",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Javascript Library for Salesforce, Visualforce using the Clay for Salesforce Package available in AppExchange",
   "main": "index.js",
   "scripts": {
