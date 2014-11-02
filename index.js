@@ -30,6 +30,7 @@ VisualforceRemoting = function(remoteAction, options, nullok) {
   }
 
   if(!options || options === {} ) options = VisualforceRemoting.standardOptions;
+  options.escape=false;
 
   var namespace, controller, method;
   var Manager = Visualforce.remoting.Manager;
