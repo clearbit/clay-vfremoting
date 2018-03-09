@@ -72,6 +72,8 @@ VisualforceRemoting.handleResultWithPromise = function(result, event, nullok, de
     }
   } else if (typeof nullok !== 'undefined' && nullok) {
     deferred.resolve();
+  } else if (event && event.type === "exception") {
+    deferred.reject(event);
   } else {
     deferred.reject({
       message: 'Null returned by RemoteAction not called with nullOk flag',
